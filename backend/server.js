@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Database connection
-mongoose.connect('mongodb://127.0.0.1:27017/User');
+mongoose.connect('mongodb://127.0.0.1:27017/User', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Routes
 const authRoutes = require('./routes/authRoutes');
